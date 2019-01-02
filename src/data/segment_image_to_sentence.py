@@ -1,7 +1,6 @@
 from settings import FILE_DATA_EXEMPLE, DIR_DATA_LINES_KHALIL
 import cv2
 import numpy as np
-import image
 import os
 
 img = cv2.imread(FILE_DATA_EXEMPLE)
@@ -24,5 +23,4 @@ for i, ctr in enumerate(sorted_ctrs):
 
     # show ROI
     path_name = os.path.join(DIR_DATA_LINES_KHALIL, 'segment_no_'+str(i)+'_expl.jpg')
-    print(path_name)
     cv2.imwrite(path_name, roi)
