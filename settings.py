@@ -6,6 +6,8 @@ DIR_DATA_INTERIM = os.path.join(ROOT_DIR, 'data', 'interim')
 DIR_DATA_PROCESSED = os.path.join(ROOT_DIR, 'data', 'processed')
 DIR_DATA_EXTERNAL = os.path.join(ROOT_DIR, 'data', 'external')
 
+DIR_DATA_LINES_KHALIL = os.path.join(DIR_DATA_INTERIM, 'LINES KHALIL')
+
 NAME_FILE_KHALIL = 'code_musulman_par_khalil.pdf'
 FILE_DATA_RAW_KHALIL = os.path.join(DIR_DATA_RAW, NAME_FILE_KHALIL)
 

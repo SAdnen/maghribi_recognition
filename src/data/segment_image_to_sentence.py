@@ -1,4 +1,4 @@
-from settings import FILE_DATA_EXEMPLE, DIR_DATA_INTERIM
+from settings import FILE_DATA_EXEMPLE, DIR_DATA_LINES_KHALIL
 import cv2
 import numpy as np
 import image
@@ -20,8 +20,9 @@ for i, ctr in enumerate(sorted_ctrs):
     x, y, w, h = cv2.boundingRect(ctr)
 
     # Getting ROI
-    roi = image[y:y+h, x:x+w]
+    roi = img[y:y+h, x:x+w]
 
     # show ROI
-    # path_name = os.path.join(DIR_DATA_INTERIM, 'segment no:'+str(i))
-    # cv2.imwrite(path_name, roi)
+    path_name = os.path.join(DIR_DATA_LINES_KHALIL, 'segment_no_'+str(i)+'_expl.jpg')
+    print(path_name)
+    cv2.imwrite(path_name, roi)
